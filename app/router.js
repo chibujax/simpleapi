@@ -5,5 +5,6 @@ module.exports = app => {
   const blogPostRoutes = express.Router();
   apiRoutes.use('/blogPosts', blogPostRoutes);
   blogPostRoutes.post('/', BlogController.publishPost);
+  blogPostRoutes.get('/', BlogController.getPost);
   app.use('/api', apiRoutes);
 };

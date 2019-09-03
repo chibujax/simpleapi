@@ -1,7 +1,5 @@
-// blogpost.model.js
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// BlogPost Schema
 const BlogPostSchema = mongoose.Schema({
   url: {
     type: String,

@@ -21,3 +21,12 @@ exports.publishPost = (req, res) => {
     }
   });
 };
+
+exports.getPost = (req, res) => {
+  const blogPost = BlogPost.find({})
+  console.log(blogPost.count())
+  return res.status(200).json({
+    msg: 'Successfully published blog post.',
+    blogPost: blogPost
+  });
+};
